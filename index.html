@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen Alchemy — Professional Culinary Mastery</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+  margin:0;
+  font-family:system-ui, sans-serif;
+  background:#0f0f0f;
+  color:#f4f4f4;
+  line-height:1.6;
+}
+header{
+  background:#161616;
+  padding:40px 20px;
+  text-align:center;
+  border-bottom:1px solid #222;
+}
+header h1{
+  color:#ff9f43;
+  margin:0;
+}
+header p{
+  color:#aaa;
+  margin:6px 0 0;
+  font-size:1.1rem;
+}
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:30px 20px;
+}
+section{
+  margin-bottom:30px;
+}
+.week-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+}
+.week-buttons button{
+  background:#ff9f43;
+  border:none;
+  border-radius:8px;
+  padding:12px 20px;
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+}
+.week-buttons button:hover{
+  opacity:.9;
+}
+footer{
+  text-align:center;
+  color:#aaa;
+  padding:20px;
+  font-size:.85rem;
+  border-top:1px solid #222;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kitchen Alchemy</h1>
+  <p>Professional Culinary Mastery — 6-Month Intensive Course</p>
+</header>
+
+<main>
+<section>
+  <h2>Course Overview</h2>
+  <p>Welcome to Kitchen Alchemy! Over the next six months, you'll train your palate, master heat control, develop texture and flavor, and learn professional plating and dish design. The course is structured into <strong>26 weeks</strong>, with <strong>7 daily lessons per week</strong>. Each day is designed to teach you real, actionable skills so you can think, taste, and cook like a professional chef.</p>
+</section>
+
+<section>
+  <h2>Navigate Weeks</h2>
+  <div class="week-buttons" id="weekButtons">
+    <!-- Buttons will be generated with JS -->
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Kitchen Alchemy — All course code licensed under AGPL-3.0
+</footer>
+
+<script>
+const weekContainer = document.getElementById('weekButtons');
+for(let i=1;i<=26;i++){
+  const btn = document.createElement('button');
+  btn.textContent = `Week ${i}`;
+  btn.onclick = () => {
+    window.location.href = `weeks/week${i}.html`;
+  };
+  weekContainer.appendChild(btn);
+}
+</script>
+
+</body>
+</html>
